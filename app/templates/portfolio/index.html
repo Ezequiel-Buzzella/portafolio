@@ -1,1 +1,24 @@
-lala
+{% extends "base.html" %}
+
+{%block title%}
+Bienvenido
+{%endblock%}
+
+{%block content%}
+    <div class='hero'>
+        <div class="hero-content">
+            <div class="left">
+                <h1>Soy desarrollador</h1>
+                <h2>Ezequiel Buzzella</h2>
+                <p>Portafolio centrado en el desarrollo de aplicaciones informáticas, mostrando mis proyectos y experiencia
+                    Actualmente estoy terminando mis estudios universitarios en informática y busco aplicar mis habilidades en entornos de trabajo reales
+                </p>
+                <a href='#contacto' class='btn'>Contactame</a>
+            </div>
+            <div class="right">
+                <img src="{{url_for('static', filename='data.jpg')}}" />
+            </div>
+        </div>
+    </div>
+    {%include 'portfolio/first-section.html'%}
+{%endblock%}
